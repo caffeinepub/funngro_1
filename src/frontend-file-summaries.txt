@@ -1,0 +1,19 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up TanStack Router with two routes (landing and details pages) wrapped in a shared marketing layout.",
+  "frontend/src/components/marketing/MarketingLayout.tsx": "Shared layout wrapper that provides consistent header navigation and footer across all marketing pages.",
+  "frontend/src/components/marketing/TopNav.tsx": "Responsive top navigation component with mobile menu, route highlighting, and prominent CTA button.",
+  "frontend/src/components/marketing/Footer.tsx": "Footer component with navigation links, quick links to page sections using anchor tags for hash navigation, and required Caffeine.ai attribution with dynamic year and UTM tracking.",
+  "frontend/src/components/marketing/Section.tsx": "Reusable semantic section wrapper component with optional muted background variant for consistent page structure.",
+  "frontend/src/components/marketing/TrustSignals.tsx": "Trust signals component displaying key statistics (active users, earnings, projects) in card format with icons.",
+  "frontend/src/components/marketing/HowItWorksOverview.tsx": "Compact 4-step overview component showing the freelancing process with icons and hover effects.",
+  "frontend/src/components/marketing/FaqAccordion.tsx": "Accordion component with 8 common questions and answers about teen freelancing, safety, and platform usage.",
+  "frontend/src/components/marketing/EligibilityRequirements.tsx": "Card component listing the 6 eligibility requirements for joining Funngro with checkmark icons.",
+  "frontend/src/pages/TeenLandingPage.tsx": "Main landing page with hero section, trust signals, benefits grid, how-it-works overview, testimonial, and CTAs; includes SEO metadata hook.",
+  "frontend/src/pages/TeenDetailsPage.tsx": "Detailed guide page with step-by-step process, eligibility requirements, safety features, and comprehensive FAQ section; includes SEO metadata hook.",
+  "frontend/src/seo/routeMetadata.ts": "Centralized SEO metadata configuration for both routes including titles, descriptions, robots directives, and canonical URL generation.",
+  "frontend/src/hooks/useRouteSeo.ts": "Custom hook that applies per-route SEO metadata (title, description, robots, canonical) to the document at runtime.",
+  "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks when backend functionality is implemented.",
+  "frontend/src/lib/utils.ts": "Utility function for merging Tailwind CSS classes using clsx and tailwind-merge.",
+  "frontend/src/index.css": "Global styles with warm, teen-friendly OKLCH color system (coral/orange primary, peach secondary, yellow accent) for both light and dark modes, plus accessibility focus styles.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with warm color palette, custom shadows, Inter font family, and animation keyframes."
+}

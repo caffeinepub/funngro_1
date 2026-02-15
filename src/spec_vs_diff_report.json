@@ -1,0 +1,72 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-15T20:10:34.090Z",
+  "summary": "Diff adds a 2-route marketing site using TanStack Router with shared layout (TopNav/Footer), warm non-blue/purple theming, and a centralized per-route SEO metadata system applied via a hook. However, required generated icon/background images are not evidenced as rendered, and several unrequested/forbidden-path authentication/actor-related files and a backend canister stub were added.",
+  "missing_requirements": [
+    {
+      "id": "REQ-6",
+      "requirement": "Add required static marketing images (hero, 6-icon set, warm abstract background) under frontend/public/assets/generated and render them on the two pages with descriptive alt text.",
+      "reason": "The Teen hero image is referenced, but the diff summary provides no evidence that the required 6-icon image (funngro-teen-icons.dim_512x512.png) or the warm abstract background image (funngro-warm-bg.dim_1920x1080.png) are referenced/rendered anywhere. Asset files themselves are also not shown (some files omitted).",
+      "evidence": [
+        "frontend/src/pages/TeenLandingPage.tsx (references only /assets/generated/funngro-teen-hero.dim_1600x900.png)",
+        "frontend/src/pages/TeenDetailsPage.tsx (truncated; no evidence of required icon/background images)"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Added a backend canister stub (empty actor).",
+      "reason": "BuildRequest is for a frontend 2-page marketing site and explicitly includes non-goals around backend CRUD/services; adding a backend file is not requested.",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Added/implemented Internet Identity + actor/react-query wiring and hooks.",
+      "reason": "Authentication is not required for this request, and the BuildRequest constraints explicitly mark certain auth/actor/main paths as immutable (do not edit). Regardless of whether they are “added” vs “modified” in the summary, introducing these components is not requested for the marketing-site scope.",
+      "evidence": [
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/src/hooks/useQueries.ts"
+      ]
+    },
+    {
+      "description": "Added an external promotional footer link to caffeine.ai with UTM parameters.",
+      "reason": "Not requested and could be considered an unapproved outbound marketing/analytics-style referral link (non-goals mention not integrating third-party analytics/providers).",
+      "evidence": [
+        "frontend/src/components/marketing/Footer.tsx"
+      ]
+    }
+  ],
+  "confidence": 0.72,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/marketing/EligibilityRequirements.tsx",
+    "frontend/src/components/marketing/FaqAccordion.tsx",
+    "frontend/src/components/marketing/Footer.tsx",
+    "frontend/src/components/marketing/HowItWorksOverview.tsx",
+    "frontend/src/components/marketing/MarketingLayout.tsx",
+    "frontend/src/components/marketing/Section.tsx",
+    "frontend/src/components/marketing/TopNav.tsx",
+    "frontend/src/components/marketing/TrustSignals.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useQueries.ts",
+    "frontend/src/hooks/useRouteSeo.ts",
+    "frontend/src/index.css",
+    "frontend/src/lib/utils.ts",
+    "frontend/src/main.tsx",
+    "frontend/src/pages/TeenDetailsPage.tsx",
+    "frontend/src/pages/TeenLandingPage.tsx",
+    "frontend/src/seo/routeMetadata.ts",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

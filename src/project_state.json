@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Design a 2-page website experience for Funngro based on the funngro.com Teen page, including SEO-friendly content.",
+  "architectural_notes": [
+    "Scope: 2-page web design derived from Funngro Teen page.",
+    "Content must be SEO-friendly (structured headings and keyword-aware copy)."
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Teen-focused hero illustration showing a teen using a laptop/phone with positive, modern flat style (funngro-teen-hero.dim_1600x900.png)\n- Set of 6 simple flat vector-style icons representing: projects, earnings, skills, safety, time flexibility, and mentorship (funngro-teen-icons.dim_512x512.png)\n- Warm abstract background texture/shape gradient (non-blue/purple dominant) (funngro-warm-bg.dim_1920x1080.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-a-2-page-responsive-marketing-website-experience-for-funngro-inspired-by-the-layout-content-structure-of-the-funngro-com-teen-page-with-clear-navigation-between-the-two-pages",
+      "title": "Implement a 2-page, responsive marketing website experience for Funngro inspired by the layout/content structure of the funngro.com “Teen” page, with clear navigation between the two pages.",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-page-1-teen-landing-with-seo-friendly-english-marketing-copy-that-targets-teens-a-hero-section-with-value-proposition-key-benefits-a-simple-how-it-works-overview-trust-signals-stats-or-short-quotes-and-a-primary-call-to-action-section",
+      "title": "Create Page 1 (Teen Landing) with SEO-friendly, English marketing copy that targets teens: a hero section with value proposition, key benefits, a simple “How it works” overview, trust signals (stats or short quotes), and a primary call-to-action section.",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-page-2-teen-details-that-expands-on-the-teen-landing-with-seo-friendly-english-content-detailed-steps-eligibility-requirements-safety-trust-explanation-faqs-and-a-secondary-call-to-action",
+      "title": "Create Page 2 (Teen Details) that expands on the Teen Landing with SEO-friendly, English content: detailed steps, eligibility/requirements, safety/trust explanation, FAQs, and a secondary call-to-action.",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-seo-ready-metadata-and-structure-for-both-pages-unique-document-titles-meta-descriptions-canonical-url-strategy-configurable-and-accessible-semantic-markup-that-supports-search-indexing",
+      "title": "Add SEO-ready metadata and structure for both pages: unique document titles, meta descriptions, canonical URL strategy (configurable), and accessible/semantic markup that supports search indexing.",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-a-coherent-creative-visual-theme-across-the-two-pages-colors-typography-spacing-button-styles-and-section-patterns-appropriate-for-a-teen-focused-brand-avoid-a-blue-purple-default-palette",
+      "title": "Apply a coherent, creative visual theme across the two pages (colors, typography, spacing, button styles, and section patterns) appropriate for a teen-focused brand; avoid a blue/purple default palette.",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-required-static-marketing-images-generated-assets-and-render-them-on-the-two-pages-from-the-frontend-public-assets-folder-do-not-serve-them-from-the-backend",
+      "title": "Add required static marketing images (generated assets) and render them on the two pages from the frontend public assets folder (do not serve them from the backend).",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Create a 2-page design for Funngro inspired by the funngro.com Teen page (layout/content structure).",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Implement SEO-friendly content for the 2 pages (optimized copy, headings, metadata-ready content).",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Funngro",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

@@ -1,0 +1,131 @@
+{
+  "kind": "build_request",
+  "title": "Create 2-page Funngro (Teen) marketing site with SEO-friendly content",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Implement a 2-page, responsive marketing website experience for Funngro inspired by the layout/content structure of the funngro.com “Teen” page, with clear navigation between the two pages.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "go the the website funngro.com click on the teen page and create a 2 page design for Funngro"
+        ]
+      },
+      "acceptanceCriteria": [
+        "App has exactly two primary pages/routes accessible via top navigation and clear CTAs (e.g., header links/buttons).",
+        "Both pages are mobile-first and adapt cleanly to tablet/desktop (no overlapping content; spacing and typography scale appropriately).",
+        "Page structure uses semantic sections (header, main, section, footer) and consistent components (hero, benefits, steps, testimonials/quotes, FAQ, footer)."
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Create Page 1 (Teen Landing) with SEO-friendly, English marketing copy that targets teens: a hero section with value proposition, key benefits, a simple “How it works” overview, trust signals (stats or short quotes), and a primary call-to-action section.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "click on the teen page and create a 2 page design for Funngro, make sure to implement  SEO freindly content"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Teen Landing page contains: a single H1, multiple scannable H2 sections, short paragraphs, and bullet lists where appropriate.",
+        "Copy is written in English and is SEO-oriented (includes relevant terms like “teen freelancing”, “paid projects for teens”, “earn money as a teen”, without keyword stuffing).",
+        "Primary CTA is visually prominent above the fold and repeated near the bottom of the page.",
+        "Footer includes internal links to the second page and core sections (e.g., How it works, FAQ)."
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create Page 2 (Teen Details) that expands on the Teen Landing with SEO-friendly, English content: detailed steps, eligibility/requirements, safety/trust explanation, FAQs, and a secondary call-to-action.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "create a 2 page design for Funngro, make sure to implement  SEO freindly content"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Teen Details page contains: a single H1 distinct from Page 1, logical H2/H3 hierarchy, and an FAQ section with question headings and concise answers.",
+        "Includes internal links back to the Teen Landing page and to key sections within the page (anchor links if used).",
+        "Content is clearly targeted to teen intent (what you do, how you get projects, how payments/verification works at a high level, safety)."
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Add SEO-ready metadata and structure for both pages: unique document titles, meta descriptions, canonical URL strategy (configurable), and accessible/semantic markup that supports search indexing.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ],
+        "quotes": [
+          "implement  SEO freindly content"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Each page sets a unique document title and meta description (no duplicates).",
+        "Pages have exactly one H1 each, descriptive H2s, and meaningful link text (no “click here”).",
+        "All images used in-page have descriptive alt text.",
+        "Site includes a basic robots meta policy (index/follow) and is ready to add canonical URLs without code refactor (e.g., centralized metadata config per route)."
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Apply a coherent, creative visual theme across the two pages (colors, typography, spacing, button styles, and section patterns) appropriate for a teen-focused brand; avoid a blue/purple default palette.",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Both pages share a consistent design system (same button variants, typography scale, card styles, spacing rhythm).",
+        "Theme uses a distinct non-blue/purple-forward palette and looks intentional across headers, CTAs, and section backgrounds.",
+        "Interactive elements have clear hover/focus states and meet basic accessibility expectations (visible focus, readable contrast)."
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add required static marketing images (generated assets) and render them on the two pages from the frontend public assets folder (do not serve them from the backend).",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-2"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Generated images are placed under frontend/public/assets/generated and referenced directly by the frontend.",
+        "Images appear in the hero and/or section headers in a way that supports the overall layout without breaking responsiveness.",
+        "All rendered images include alt text aligned to what is visually depicted (not keyword stuffing)."
+      ]
+    }
+  ],
+  "constraints": [
+    "Do not modify files under frontend/src/components/ui (compose these components instead).",
+    "Do not edit frontend/src/hooks/useInternetIdentity.ts, frontend/src/hooks/useInternetIdentity.tsx, frontend/src/hooks/useActor.ts, or frontend/src/main.tsx (immutable paths).",
+    "No third-party authentication other than Internet Identity (not required for this request).",
+    "Do not add external databases or non-supported backend services."
+  ],
+  "nonGoals": [
+    "Implementing sign-up/login flows, account management, or an application dashboard.",
+    "Building backend CRUD, data persistence, or admin panels.",
+    "Integrating third-party analytics, email/SMS providers, or social media APIs.",
+    "Scraping or automatically importing content from funngro.com; content should be newly authored and only inspired by the referenced Teen page structure."
+  ],
+  "imageRequirements": {
+    "required": [
+      "Teen-focused hero illustration showing a teen using a laptop/phone with positive, modern flat style (funngro-teen-hero.dim_1600x900.png)",
+      "Set of 6 simple flat vector-style icons representing: projects, earnings, skills, safety, time flexibility, and mentorship (funngro-teen-icons.dim_512x512.png)",
+      "Warm abstract background texture/shape gradient (non-blue/purple dominant) (funngro-warm-bg.dim_1920x1080.png)"
+    ],
+    "edits": []
+  }
+}
