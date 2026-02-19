@@ -2,96 +2,9 @@
   "kind": "feature_evidence_report",
   "features": [
     {
-      "featureId": "feature-implement-a-2-page-responsive-marketing-website-experience-for-funngro-inspired-by-the-layout-content-structure-of-the-funngro-com-teen-page-with-clear-navigation-between-the-two-pages",
-      "featureTitle": "Implement a 2-page, responsive marketing website experience for Funngro inspired by the layout/content structure of the funngro.com “Teen” page, with clear navigation between the two pages.",
+      "featureId": "feature-update-the-site-color-theme-so-the-current-warm-red-leaning-background-and-accents-are-replaced-with-a-calm-green-palette-matching-the-referenced-funngro-teen-page-vibe-without-changing-page-content-or-layout",
+      "featureTitle": "Update the site color theme so the current warm/red-leaning background and accents are replaced with a calm green palette (matching the referenced Funngro teen page vibe), without changing page content or layout.",
       "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/marketing/Footer.tsx",
-        "frontend/src/components/marketing/MarketingLayout.tsx",
-        "frontend/src/components/marketing/Section.tsx",
-        "frontend/src/components/marketing/TopNav.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-1"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-page-1-teen-landing-with-seo-friendly-english-marketing-copy-that-targets-teens-a-hero-section-with-value-proposition-key-benefits-a-simple-how-it-works-overview-trust-signals-stats-or-short-quotes-and-a-primary-call-to-action-section",
-      "featureTitle": "Create Page 1 (Teen Landing) with SEO-friendly, English marketing copy that targets teens: a hero section with value proposition, key benefits, a simple “How it works” overview, trust signals (stats or short quotes), and a primary call-to-action section.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/marketing/HowItWorksOverview.tsx",
-        "frontend/src/components/marketing/TrustSignals.tsx",
-        "frontend/src/pages/TeenLandingPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-2"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-create-page-2-teen-details-that-expands-on-the-teen-landing-with-seo-friendly-english-content-detailed-steps-eligibility-requirements-safety-trust-explanation-faqs-and-a-secondary-call-to-action",
-      "featureTitle": "Create Page 2 (Teen Details) that expands on the Teen Landing with SEO-friendly, English content: detailed steps, eligibility/requirements, safety/trust explanation, FAQs, and a secondary call-to-action.",
-      "files": [
-        "frontend/src/App.tsx",
-        "frontend/src/components/marketing/EligibilityRequirements.tsx",
-        "frontend/src/components/marketing/FaqAccordion.tsx",
-        "frontend/src/pages/TeenDetailsPage.tsx"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-3"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-add-seo-ready-metadata-and-structure-for-both-pages-unique-document-titles-meta-descriptions-canonical-url-strategy-configurable-and-accessible-semantic-markup-that-supports-search-indexing",
-      "featureTitle": "Add SEO-ready metadata and structure for both pages: unique document titles, meta descriptions, canonical URL strategy (configurable), and accessible/semantic markup that supports search indexing.",
-      "files": [
-        "frontend/index.html",
-        "frontend/src/hooks/useRouteSeo.ts",
-        "frontend/src/pages/TeenDetailsPage.tsx",
-        "frontend/src/pages/TeenLandingPage.tsx",
-        "frontend/src/seo/routeMetadata.ts"
-      ],
-      "components": [
-        "core-infrastructure@1.0.2",
-        "shadcn-ui@1.0.0",
-        "build-template-react@1.0.0",
-        "initial-app@1.0.0",
-        "github-export-icp-cli@1.0.0"
-      ],
-      "testIds": [
-        "REQ-4"
-      ],
-      "confidence": "high"
-    },
-    {
-      "featureId": "feature-apply-a-coherent-creative-visual-theme-across-the-two-pages-colors-typography-spacing-button-styles-and-section-patterns-appropriate-for-a-teen-focused-brand-avoid-a-blue-purple-default-palette",
-      "featureTitle": "Apply a coherent, creative visual theme across the two pages (colors, typography, spacing, button styles, and section patterns) appropriate for a teen-focused brand; avoid a blue/purple default palette.",
-      "files": [
-        "frontend/src/components/marketing/MarketingLayout.tsx",
         "frontend/src/index.css",
         "frontend/tailwind.config.js"
       ],
@@ -103,16 +16,16 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-5"
+        "REQ-7"
       ],
       "confidence": "high"
     },
     {
-      "featureId": "feature-add-required-static-marketing-images-generated-assets-and-render-them-on-the-two-pages-from-the-frontend-public-assets-folder-do-not-serve-them-from-the-backend",
-      "featureTitle": "Add required static marketing images (generated assets) and render them on the two pages from the frontend public assets folder (do not serve them from the backend).",
+      "featureId": "feature-implement-the-calm-green-palette-by-updating-the-css-theme-tokens-used-by-tailwind-oklch-variables-in-frontend-src-index-css-including-light-and-dark-mode-values-for-background-primary-secondary-accent-ring-and-any-related-chart-shadow-tokens-that-currently-bias-warm-red-orange",
+      "featureTitle": "Implement the calm green palette by updating the CSS theme tokens used by Tailwind (OKLCH variables) in frontend/src/index.css, including light and dark mode values for background, primary, secondary, accent, ring, and any related chart/shadow tokens that currently bias warm red/orange.",
       "files": [
-        "frontend/src/pages/TeenDetailsPage.tsx",
-        "frontend/src/pages/TeenLandingPage.tsx"
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
       ],
       "components": [
         "core-infrastructure@1.0.2",
@@ -122,7 +35,7 @@
         "github-export-icp-cli@1.0.0"
       ],
       "testIds": [
-        "REQ-6"
+        "REQ-8"
       ],
       "confidence": "high"
     }

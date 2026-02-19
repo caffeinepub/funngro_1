@@ -1,71 +1,43 @@
 {
   "kind": "spec_vs_diff_report",
   "version": "1.0",
-  "generatedAt": "2026-02-15T20:10:34.090Z",
-  "summary": "Diff adds a 2-route marketing site using TanStack Router with shared layout (TopNav/Footer), warm non-blue/purple theming, and a centralized per-route SEO metadata system applied via a hook. However, required generated icon/background images are not evidenced as rendered, and several unrequested/forbidden-path authentication/actor-related files and a backend canister stub were added.",
-  "missing_requirements": [
-    {
-      "id": "REQ-6",
-      "requirement": "Add required static marketing images (hero, 6-icon set, warm abstract background) under frontend/public/assets/generated and render them on the two pages with descriptive alt text.",
-      "reason": "The Teen hero image is referenced, but the diff summary provides no evidence that the required 6-icon image (funngro-teen-icons.dim_512x512.png) or the warm abstract background image (funngro-warm-bg.dim_1920x1080.png) are referenced/rendered anywhere. Asset files themselves are also not shown (some files omitted).",
-      "evidence": [
-        "frontend/src/pages/TeenLandingPage.tsx (references only /assets/generated/funngro-teen-hero.dim_1600x900.png)",
-        "frontend/src/pages/TeenDetailsPage.tsx (truncated; no evidence of required icon/background images)"
-      ]
-    }
-  ],
+  "generatedAt": "2026-02-15T20:14:46.807Z",
+  "summary": "REQ-7/REQ-8 appear implemented via updating OKLCH theme tokens in frontend/src/index.css for light and dark modes (primary/accent/ring/background/muted/chart). However, the diff also introduces additional unrequested changes (Tailwind config updates, global focus/scroll/heading styles, and meta project/documentation file edits) that go beyond the explicit request to keep changes limited to styling/theme tokens in index.css.",
+  "missing_requirements": [],
   "hallucinated_features": [
     {
-      "description": "Added a backend canister stub (empty actor).",
-      "reason": "BuildRequest is for a frontend 2-page marketing site and explicitly includes non-goals around backend CRUD/services; adding a backend file is not requested.",
+      "description": "Modified Tailwind configuration (colors mapping, font family, border radius, and boxShadow including a renamed/repurposed 'warm' shadow) beyond the request to implement the palette via frontend/src/index.css tokens.",
+      "reason": "BuildRequest specifically calls out implementing the calm green palette by updating Tailwind CSS theme tokens (OKLCH variables) in frontend/src/index.css; it does not request changes to frontend/tailwind.config.js.",
       "evidence": [
-        "backend/main.mo"
+        "frontend/tailwind.config.js"
       ]
     },
     {
-      "description": "Added/implemented Internet Identity + actor/react-query wiring and hooks.",
-      "reason": "Authentication is not required for this request, and the BuildRequest constraints explicitly mark certain auth/actor/main paths as immutable (do not edit). Regardless of whether they are “added” vs “modified” in the summary, introducing these components is not requested for the marketing-site scope.",
+      "description": "Added/changed global base styles unrelated to theme token updates (e.g., making all headings bold, enabling smooth scrolling, adding a global :focus-visible ring rule).",
+      "reason": "REQ-7/REQ-8 focus on palette/theme token changes; these behavioral/typographic base style changes were not requested and could affect UI beyond color theme.",
       "evidence": [
-        "frontend/src/main.tsx",
-        "frontend/src/hooks/useInternetIdentity.ts",
-        "frontend/src/hooks/useActor.ts",
-        "frontend/src/hooks/useQueries.ts"
+        "frontend/src/index.css"
       ]
     },
     {
-      "description": "Added an external promotional footer link to caffeine.ai with UTM parameters.",
-      "reason": "Not requested and could be considered an unapproved outbound marketing/analytics-style referral link (non-goals mention not integrating third-party analytics/providers).",
+      "description": "Updated frontend-file-summaries.txt content.",
+      "reason": "Not requested; BuildRequest scope is styling/theme changes.",
       "evidence": [
-        "frontend/src/components/marketing/Footer.tsx"
+        "frontend-file-summaries.txt"
+      ]
+    },
+    {
+      "description": "Modified project_state.json.",
+      "reason": "Not requested; BuildRequest scope is styling/theme changes and no mention of updating project tracking/state files.",
+      "evidence": [
+        "project_state.json"
       ]
     }
   ],
-  "confidence": 0.72,
+  "confidence": 0.74,
   "changed_files": [
-    "all_files_summary.json",
-    "backend/main.mo",
     "frontend-file-summaries.txt",
-    "frontend/index.css",
-    "frontend/index.html",
-    "frontend/src/App.tsx",
-    "frontend/src/components/marketing/EligibilityRequirements.tsx",
-    "frontend/src/components/marketing/FaqAccordion.tsx",
-    "frontend/src/components/marketing/Footer.tsx",
-    "frontend/src/components/marketing/HowItWorksOverview.tsx",
-    "frontend/src/components/marketing/MarketingLayout.tsx",
-    "frontend/src/components/marketing/Section.tsx",
-    "frontend/src/components/marketing/TopNav.tsx",
-    "frontend/src/components/marketing/TrustSignals.tsx",
-    "frontend/src/hooks/useActor.ts",
-    "frontend/src/hooks/useInternetIdentity.ts",
-    "frontend/src/hooks/useQueries.ts",
-    "frontend/src/hooks/useRouteSeo.ts",
     "frontend/src/index.css",
-    "frontend/src/lib/utils.ts",
-    "frontend/src/main.tsx",
-    "frontend/src/pages/TeenDetailsPage.tsx",
-    "frontend/src/pages/TeenLandingPage.tsx",
-    "frontend/src/seo/routeMetadata.ts",
     "frontend/tailwind.config.js",
     "project_state.json"
   ]

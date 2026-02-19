@@ -1,203 +1,48 @@
 {
   "kind": "implementation_plan",
   "version": "1.0",
-  "title": "Funngro Teen Marketing Site (2 Pages) with SEO + Warm Teen Theme",
+  "title": "Switch warm red theme tokens to calm green palette",
   "requirements": [
     {
-      "id": "REQ-1",
-      "summary": "Implement a responsive, 2-page teen-focused marketing site with clear navigation between the two pages and consistent semantic section structure.",
+      "id": "REQ-7",
+      "summary": "Replace warm/red-leaning background and accents with a calm green palette while preserving all existing content and layout.",
       "acceptanceCriteria": [
-        "App has exactly two primary pages/routes accessible via top navigation and clear CTAs (e.g., header links/buttons).",
-        "Both pages are mobile-first and adapt cleanly to tablet/desktop (no overlapping content; spacing and typography scale appropriately).",
-        "Page structure uses semantic sections (header, main, section, footer) and consistent components (hero, benefits, steps, testimonials/quotes, FAQ, footer)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Define exactly two primary routes for the marketing site (Teen Landing + Teen Details), wire top-level layout, and ensure navigation/CTAs link between the two pages (no additional primary pages)."
-        },
-        {
-          "path": "frontend/src/components/marketing/MarketingLayout.tsx",
-          "operation": "create",
-          "description": "Create a shared marketing layout that uses semantic markup (header/main/footer), wraps routed pages, and provides consistent spacing/section patterns across both pages."
-        },
-        {
-          "path": "frontend/src/components/marketing/TopNav.tsx",
-          "operation": "create",
-          "description": "Create a responsive top navigation with links to both pages and a prominent CTA button; compose shadcn-ui Button (and related primitives as needed). Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/marketing/Footer.tsx",
-          "operation": "create",
-          "description": "Create a footer with internal links to both pages and key sections (e.g., How it works, FAQ) using accessible link text; keep consistent across both pages."
-        },
-        {
-          "path": "frontend/src/components/marketing/Section.tsx",
-          "operation": "create",
-          "description": "Create a reusable semantic <section> wrapper with optional heading/description slots to keep page structure consistent and improve readability/SEO."
-        }
-      ]
-    },
-    {
-      "id": "REQ-2",
-      "summary": "Create the Teen Landing page with SEO-friendly English copy: hero, benefits, how-it-works overview, trust signals, and repeated primary CTA with footer links.",
-      "acceptanceCriteria": [
-        "Teen Landing page contains: a single H1, multiple scannable H2 sections, short paragraphs, and bullet lists where appropriate.",
-        "Copy is written in English and is SEO-oriented (includes relevant terms like “teen freelancing”, “paid projects for teens”, “earn money as a teen”, without keyword stuffing).",
-        "Primary CTA is visually prominent above the fold and repeated near the bottom of the page.",
-        "Footer includes internal links to the second page and core sections (e.g., How it works, FAQ)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/TeenLandingPage.tsx",
-          "operation": "create",
-          "description": "Implement Page 1 (Teen Landing) with a single H1, scannable H2 sections (benefits, how it works, trust signals, FAQ preview), warm teen-friendly marketing copy, and prominent CTA above-the-fold and near bottom; compose shadcn-ui Card/Badge/Button as appropriate. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/marketing/TrustSignals.tsx",
-          "operation": "create",
-          "description": "Create a trust signals component (stats or short quotes) designed for the landing page; compose shadcn-ui Card and typography patterns. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/marketing/HowItWorksOverview.tsx",
-          "operation": "create",
-          "description": "Create a compact how-it-works overview (3–4 steps) suitable for the landing page, using semantic headings and bullet lists; compose shadcn-ui Card if needed. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Wire TeenLandingPage into the routing and ensure nav/CTA routes correctly to Teen Details; ensure footer links point to the second page and landing sections."
-        }
-      ]
-    },
-    {
-      "id": "REQ-3",
-      "summary": "Create the Teen Details page with expanded SEO-friendly English content: detailed steps, eligibility, safety/trust explanation, FAQs, and a secondary CTA with internal linking.",
-      "acceptanceCriteria": [
-        "Teen Details page contains: a single H1 distinct from Page 1, logical H2/H3 hierarchy, and an FAQ section with question headings and concise answers.",
-        "Includes internal links back to the Teen Landing page and to key sections within the page (anchor links if used).",
-        "Content is clearly targeted to teen intent (what you do, how you get projects, how payments/verification works at a high level, safety)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/pages/TeenDetailsPage.tsx",
-          "operation": "create",
-          "description": "Implement Page 2 (Teen Details) with a distinct single H1, H2/H3 hierarchy for steps/eligibility/safety, an FAQ section, internal links back to Teen Landing, optional on-page anchor navigation, and a secondary CTA; compose shadcn-ui Accordion for FAQs and Button for CTAs. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/marketing/FaqAccordion.tsx",
-          "operation": "create",
-          "description": "Create an FAQ accordion component with accessible headings and concise answers, intended for the Teen Details page; compose shadcn-ui Accordion primitives. Verify the component's usage instructions before implementing."
-        },
-        {
-          "path": "frontend/src/components/marketing/EligibilityRequirements.tsx",
-          "operation": "create",
-          "description": "Create an eligibility/requirements block (bullet lists + short explanations) for the Teen Details page, keeping content teen-focused and scannable."
-        },
-        {
-          "path": "frontend/src/App.tsx",
-          "operation": "modify",
-          "description": "Wire TeenDetailsPage into the routing and ensure top navigation and CTAs allow moving between both pages."
-        }
-      ]
-    },
-    {
-      "id": "REQ-4",
-      "summary": "Add SEO-ready metadata for both pages with centralized per-route configuration: unique titles, meta descriptions, robots policy, and canonical URL strategy (configurable).",
-      "acceptanceCriteria": [
-        "Each page sets a unique document title and meta description (no duplicates).",
-        "Pages have exactly one H1 each, descriptive H2s, and meaningful link text (no “click here”).",
-        "All images used in-page have descriptive alt text.",
-        "Site includes a basic robots meta policy (index/follow) and is ready to add canonical URLs without code refactor (e.g., centralized metadata config per route)."
-      ],
-      "file_operations": [
-        {
-          "path": "frontend/src/seo/routeMetadata.ts",
-          "operation": "create",
-          "description": "Create a centralized metadata map for the two routes (title, description, robots index/follow, canonical path), with a configurable canonical base URL (e.g., via Vite environment variable) to avoid refactors later."
-        },
-        {
-          "path": "frontend/src/hooks/useRouteSeo.ts",
-          "operation": "create",
-          "description": "Implement a small hook that applies per-route SEO metadata at runtime (document title, meta description, robots meta, canonical link tag) based on the centralized routeMetadata config."
-        },
-        {
-          "path": "frontend/src/pages/TeenLandingPage.tsx",
-          "operation": "modify",
-          "description": "Use the SEO hook to set unique title/description/robots/canonical for Teen Landing and ensure semantic headings (exactly one H1) and meaningful internal link text."
-        },
-        {
-          "path": "frontend/src/pages/TeenDetailsPage.tsx",
-          "operation": "modify",
-          "description": "Use the SEO hook to set unique title/description/robots/canonical for Teen Details and ensure semantic headings (exactly one H1) and meaningful internal link text."
-        },
-        {
-          "path": "frontend/index.html",
-          "operation": "modify",
-          "description": "Ensure the base HTML is SEO-ready (language already set) and include any minimal defaults that do not conflict with per-route runtime metadata (avoid duplicating per-page titles/descriptions)."
-        }
-      ]
-    },
-    {
-      "id": "REQ-5",
-      "summary": "Apply a coherent, warm teen-focused visual theme (non-blue/purple-forward) with consistent typography, spacing, components, and accessible interaction states across both pages.",
-      "acceptanceCriteria": [
-        "Both pages share a consistent design system (same button variants, typography scale, card styles, spacing rhythm).",
-        "Theme uses a distinct non-blue/purple-forward palette and looks intentional across headers, CTAs, and section backgrounds.",
-        "Interactive elements have clear hover/focus states and meet basic accessibility expectations (visible focus, readable contrast)."
+        "Primary brand color (buttons, links, highlights) renders as a calm green instead of coral/red.",
+        "Page background and gradient hero backgrounds no longer appear warm red/pink; they should read as neutral + calm green accents.",
+        "Muted section backgrounds (e.g., Section variant=\"muted\") remain subtle and readable with the updated palette.",
+        "No changes to marketing copy, routing, or component structure; only styling/theme values change."
       ],
       "file_operations": [
         {
           "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Adjust global theme tokens (CSS variables used by Tailwind/shadcn-ui) to a warm, teen-appropriate palette (avoid blue/purple dominance), define consistent typography/spacing defaults, and ensure visible focus styles."
+          "description": "Update the light/dark CSS theme token values so any UI using Tailwind theme colors (e.g., bg-background, text-primary, from-primary/to-accent gradients, borders, and hover states) reads as neutral + calm green accents rather than warm coral/orange. Keep all markup and layout unchanged."
         },
         {
           "path": "frontend/tailwind.config.js",
           "operation": "modify",
-          "description": "Extend/adjust Tailwind theme (if needed) to support the warm marketing palette, gradients/backgrounds, and consistent section spacing utilities without introducing new global stylesheet entry points."
-        },
-        {
-          "path": "frontend/src/components/marketing/MarketingLayout.tsx",
-          "operation": "modify",
-          "description": "Apply consistent layout patterns (section padding, max widths, background alternation) and shared button styles via shadcn-ui Button variants. Verify the component's usage instructions before implementing."
+          "description": "Adjust any warm-tinted Tailwind theme extensions (notably the custom boxShadow value currently named \"warm\") to a green-compatible, subtle brand glow to prevent residual warm/orange casts while preserving existing class usage."
         }
       ]
     },
     {
-      "id": "REQ-6",
-      "summary": "Add required generated static marketing images under public assets and render them responsively on both pages with descriptive alt text.",
+      "id": "REQ-8",
+      "summary": "Implement calm green palette by updating Tailwind OKLCH theme tokens (light/dark) including background, primary, secondary, accent, ring, and warm-biased chart/shadow tokens.",
       "acceptanceCriteria": [
-        "Generated images are placed under frontend/public/assets/generated and referenced directly by the frontend.",
-        "Images appear in the hero and/or section headers in a way that supports the overall layout without breaking responsiveness.",
-        "All rendered images include alt text aligned to what is visually depicted (not keyword stuffing)."
+        "frontend/src/index.css updates the :root and .dark token set so --primary/--accent/--ring (and any other warm-biased tokens) are green-toned.",
+        "Interactive focus rings and outlines (ring utilities) visually match the new calm green theme.",
+        "Any existing warm-themed shadow token(s) (e.g., warm glow) are updated to a green-compatible equivalent or removed if unused, with no visual regressions (no harsh/oversaturated green casts)."
       ],
       "file_operations": [
         {
-          "path": "frontend/public/assets/generated/funngro-teen-hero.dim_1600x900.png",
-          "operation": "create",
-          "description": "Add the generated Teen-focused hero illustration asset to the public generated assets folder for direct frontend use."
-        },
-        {
-          "path": "frontend/public/assets/generated/funngro-teen-icons.dim_512x512.png",
-          "operation": "create",
-          "description": "Add the generated 6-icon set asset (projects, earnings, skills, safety, time flexibility, mentorship) to the public generated assets folder for direct frontend use."
-        },
-        {
-          "path": "frontend/public/assets/generated/funngro-warm-bg.dim_1920x1080.png",
-          "operation": "create",
-          "description": "Add the generated warm abstract background texture/shape gradient asset (non-blue/purple dominant) to the public generated assets folder for direct frontend use."
-        },
-        {
-          "path": "frontend/src/pages/TeenLandingPage.tsx",
+          "path": "frontend/src/index.css",
           "operation": "modify",
-          "description": "Render frontend/public/assets/generated/funngro-teen-hero.dim_1600x900.png in the hero (responsive) and use frontend/public/assets/generated/funngro-teen-icons.dim_512x512.png for benefits/feature visuals; ensure descriptive, non-keyword-stuffed alt text."
+          "description": "Replace warm-biased OKLCH variables in :root and .dark with calm green-toned values: update --primary, --secondary, --accent, and --ring to green hues; neutralize background/surface tokens away from red/pink warmth; and shift --chart-1..--chart-5 away from warm oranges/yellows toward a green-friendly set while maintaining contrast and readability."
         },
         {
-          "path": "frontend/src/pages/TeenDetailsPage.tsx",
+          "path": "frontend/tailwind.config.js",
           "operation": "modify",
-          "description": "Use frontend/public/assets/generated/funngro-warm-bg.dim_1920x1080.png as a decorative background for a section header area and reuse frontend/public/assets/generated/funngro-teen-icons.dim_512x512.png where helpful; ensure responsive rendering and accurate alt text for any non-decorative images."
+          "description": "Update Tailwind theme extensions that encode warm coloring (e.g., the \"warm\" boxShadow definition) to a calm green-tinted equivalent, or remove/neutralize if unused, ensuring focus/hover visuals remain consistent with the new green ring/primary tokens."
         }
       ]
     }

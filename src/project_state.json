@@ -1,14 +1,16 @@
 {
   "schemaVersion": "1.0.0",
-  "projectStateVersion": 3,
+  "projectStateVersion": 5,
   "summary": "Design a 2-page website experience for Funngro based on the funngro.com Teen page, including SEO-friendly content.",
   "architectural_notes": [
     "Scope: 2-page web design derived from Funngro Teen page.",
-    "Content must be SEO-friendly (structured headings and keyword-aware copy)."
+    "Content must be SEO-friendly (structured headings and keyword-aware copy).",
+    "Update visual theme: replace warm red background with a calm green background consistent with the reference Funngro website."
   ],
-  "known_issues": [],
-  "isFixRequest": false,
-  "imageRequirements": "## Required Images\n- Teen-focused hero illustration showing a teen using a laptop/phone with positive, modern flat style (funngro-teen-hero.dim_1600x900.png)\n- Set of 6 simple flat vector-style icons representing: projects, earnings, skills, safety, time flexibility, and mentorship (funngro-teen-icons.dim_512x512.png)\n- Warm abstract background texture/shape gradient (non-blue/purple dominant) (funngro-warm-bg.dim_1920x1080.png)",
+  "known_issues": [
+    "Current background color appears warm red; should be updated to a calm green to match the reference website."
+  ],
+  "isFixRequest": true,
   "existing_features": [
     {
       "id": "feature-implement-a-2-page-responsive-marketing-website-experience-for-funngro-inspired-by-the-layout-content-structure-of-the-funngro-com-teen-page-with-clear-navigation-between-the-two-pages",
@@ -55,6 +57,22 @@
       "title": "Add required static marketing images (generated assets) and render them on the two pages from the frontend public assets folder (do not serve them from the backend).",
       "reqIds": [
         "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-the-site-color-theme-so-the-current-warm-red-leaning-background-and-accents-are-replaced-with-a-calm-green-palette-matching-the-referenced-funngro-teen-page-vibe-without-changing-page-content-or-layout",
+      "title": "Update the site color theme so the current warm/red-leaning background and accents are replaced with a calm green palette (matching the referenced Funngro teen page vibe), without changing page content or layout.",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-the-calm-green-palette-by-updating-the-css-theme-tokens-used-by-tailwind-oklch-variables-in-frontend-src-index-css-including-light-and-dark-mode-values-for-background-primary-secondary-accent-ring-and-any-related-chart-shadow-tokens-that-currently-bias-warm-red-orange",
+      "title": "Implement the calm green palette by updating the CSS theme tokens used by Tailwind (OKLCH variables) in frontend/src/index.css, including light and dark mode values for background, primary, secondary, accent, ring, and any related chart/shadow tokens that currently bias warm red/orange.",
+      "reqIds": [
+        "REQ-8"
       ],
       "version": 1
     }

@@ -14,6 +14,6 @@
   "frontend/src/hooks/useRouteSeo.ts": "Custom hook that applies per-route SEO metadata (title, description, robots, canonical) to the document at runtime.",
   "frontend/src/hooks/useQueries.ts": "Placeholder file for future React Query hooks when backend functionality is implemented.",
   "frontend/src/lib/utils.ts": "Utility function for merging Tailwind CSS classes using clsx and tailwind-merge.",
-  "frontend/src/index.css": "Global styles with warm, teen-friendly OKLCH color system (coral/orange primary, peach secondary, yellow accent) for both light and dark modes, plus accessibility focus styles.",
-  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with warm color palette, custom shadows, Inter font family, and animation keyframes."
+  "frontend/src/index.css": "Global styles with calm green OKLCH color system (sage/mint primary, fresh green accent) for both light and dark modes, plus accessibility focus styles.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with calm green palette, green-tinted shadow (replacing warm), Inter font family, and animation keyframes."
 }
